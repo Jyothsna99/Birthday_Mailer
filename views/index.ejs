@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Birthday Mailer</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="javascripts/angular.min.js"></script>
+	<script type="text/javascript" src="javascripts/birthday.js"></script>
+</head>
+<body ng-app="birthdayApp">
+  <div class="container">
+  	<div class="col-md-4 col-md-offset-4" ng-controller="birthdayController">
+  		<form class="form-group">
+  			<br>
+  			<br>
+  			<label>Your Name:</label>
+  			<input class="form-control" type="text" ng-model="birth.uname" placeholder="Enter Your Name" required="">
+  			<br>
+  			<label>Your Friend Name:</label>
+  			<input class="form-control" type="text" ng-model="birth.fname" placeholder="Enter Your Friend Name" required="">
+  			<br>
+  			<label>Email :</label>
+  			<input class="form-control" type="email" ng-model="birth.email" placeholder="Enter Your Friend Email Id" required="">
+  			<br>
+  			<label>Date of Birth :</label>
+  			<input class="form-control" type="date" ng-model="birth.dob" placeholder="Enter Date-of-Birth of your Friend" required="">
+  			<br>
+  			<label>Meassage:</label>
+  			<textarea class="form-control" ng-model="birth.message" placeholder="Enter the Message you want to send" required=""></textarea>
+  			<br>
+  			<br>
+  			<button class="btn btn-info" ng-click="sendmail(birth)">Send Wishes</button>
+
+  		</form>
+  	</div>
+  </div>
+</body>
+</html>
